@@ -9,6 +9,16 @@ on:
       nextversion:
         required: true
         description: Next development version (e.g. 0.5.0-SNAPSHOT)
+  workflow_call:
+    inputs:
+      releaseversion:
+        required: true
+        description: Version to release (e.g. 0.4.0)
+        type: string
+      nextversion:
+        required: true
+        description: Next development version (e.g. 0.5.0-SNAPSHOT)
+        type: string
 
 jobs:
   release:
